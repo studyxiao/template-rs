@@ -2,6 +2,17 @@
 
 ## 环境设置
 
+### 使用安装脚本
+
+你可以使用提供的安装脚本一键设置开发环境：
+
+```bash
+chmod +x install.sh
+./install.sh
+```
+
+该脚本会自动安装以下所有工具。
+
 ### 安装 Rust
 
 ```bash
@@ -43,8 +54,14 @@ cargo generate tyr-rust-bootcamp/template
 
 pre-commit 是一个代码检查工具，可以在提交代码前进行代码检查。
 
+推荐使用 uv 安装：
+
 ```bash
-pipx install pre-commit
+# 如果没有安装 uv，先安装 uv
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# 使用 uv 安装 pre-commit
+uv tool install pre-commit
 ```
 
 安装成功后运行 `pre-commit install` 即可。
