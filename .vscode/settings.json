@@ -1,0 +1,127 @@
+{
+  // 文件图标主题
+  "workbench.iconTheme": "material-icon-theme",
+
+  // Rust 相关设置
+  "rust-analyzer.check.command": "clippy",
+  "rust-analyzer.checkOnSave": true,
+  "rust-analyzer.inlayHints.chainingHints.enable": true,
+  "rust-analyzer.inlayHints.typeHints.enable": true,
+  "rust-analyzer.lens.enable": true,
+  "rust-analyzer.procMacro.enable": true,
+  "rust-analyzer.cargo.allFeatures": true,
+
+  // Better Comments 设置
+  "better-comments.tags": [
+    {
+      "tag": "!",
+      "color": "#FF2D00",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "?",
+      "color": "#3498DB",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "//",
+      "color": "#474747",
+      "strikethrough": true,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "todo",
+      "color": "#FF8C00",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "*",
+      "color": "#98C379",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    }
+  ],
+
+  // Error Lens 设置
+  "errorLens.enabledDiagnosticLevels": ["error", "warning"],
+  "errorLens.excludeBySource": ["rustc"],
+
+  // TODO Highlight 设置
+  "todohighlight.keywords": [
+    {
+      "text": "TODO:",
+      "color": "#FF8C00",
+      "backgroundColor": "transparent"
+    },
+    {
+      "text": "FIXME:",
+      "color": "#FF2D00",
+      "backgroundColor": "transparent"
+    }
+  ],
+
+  // TOML 设置
+  "evenBetterToml.formatter.alignEntries": true,
+  "evenBetterToml.formatter.arrayAutoCollapse": true,
+  "evenBetterToml.formatter.arrayTrailingComma": true,
+
+  // Prettier 设置
+  "prettier.printWidth": 100,
+  "prettier.tabWidth": 2,
+  "prettier.singleQuote": true,
+  "editor.formatOnSave": true,
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
+    "editor.formatOnSave": true
+  },
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // YAML 设置
+  "yaml.format.enable": true,
+  "yaml.validate": true,
+  "yaml.schemas": {
+    "http://json.schemastore.org/github-workflow": ".github/workflows/*.yml"
+  },
+
+  // GitLens 设置
+  "gitlens.codeLens.enabled": true,
+  "gitlens.currentLine.enabled": true,
+  "gitlens.hovers.currentLine.over": "line",
+
+  // REST Client 设置
+  "rest-client.previewOption": "exchange",
+  "rest-client.enableTelemetry": false,
+
+  // Rust Test 设置
+  "rust-test-adapter.logpanel": true,
+  "testExplorer.codeLens": true
+}
