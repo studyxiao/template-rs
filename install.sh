@@ -43,6 +43,7 @@ fi
 # 安装 pre-commit
 if command -v pre-commit >/dev/null 2>&1; then
   echo -e "${YELLOW}pre-commit 已安装，跳过安装步骤${NC}"
+  pre-commit install
 else
   echo -e "${GREEN}使用 uv 安装 pre-commit...${NC}"
   uv tool install pre-commit
