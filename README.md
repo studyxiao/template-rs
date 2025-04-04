@@ -1,14 +1,31 @@
-# Geektime Rust 语言训练营
+# Rust Template
+
+> [!WARNING]
+> 由于 `cargo-generate` 未提供在最终文件夹下操作的功能，所以，如 `pre-commit install` 这样的命令需要在创建完项目后手动执行。
+>
+> issue: https://github.com/cargo-generate/cargo-generate/issues/1347
 
 ## 环境设置
-
-### 使用安装脚本
 
 你可以使用提供的安装脚本一键设置开发环境：
 
 ```bash
-chmod +x install.sh
-./install.sh
+curl -sSfL https://raw.githubusercontent.com/studyxiao/template-rs/refs/heads/main/install.sh | sh
+```
+
+或在 使用 `cargo generate` 时选择 `执行初始化脚本`。
+
+```bash
+# -a 表示允许执行 hooks 脚本中的命令
+cargo generate -a
+
+# 🤷   Project Name: test
+# 🔧   Destination:  ...
+# 🔧   project-name: test ...
+# 🔧   Generating template ...
+# ? 🤷   是否执行初始化脚本（安装开发工具） ›
+#  false
+# ❯ true
 ```
 
 该脚本会自动安装以下所有工具。
@@ -19,23 +36,6 @@ chmod +x install.sh
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
-### 安装 VSCode 插件
-
-- crates: Rust 包管理
-- Even Better TOML: TOML 文件支持
-- Better Comments: 优化注释显示
-- Error Lens: 错误提示优化
-- GitLens: Git 增强
-- Github Copilot: 代码提示
-- indent-rainbow: 缩进显示优化
-- Prettier - Code formatter: 代码格式化
-- REST client: REST API 调试
-- rust-analyzer: Rust 语言支持
-- Rust Test lens: Rust 测试支持
-- Rust Test Explorer: Rust 测试概览
-- TODO Highlight: TODO 高亮
-- YAML: YAML 文件支持
-
 ### 安装 cargo generate
 
 cargo generate 是一个用于生成项目模板的工具。它可以使用已有的 github repo 作为模版生成新的项目。
@@ -44,10 +44,10 @@ cargo generate 是一个用于生成项目模板的工具。它可以使用已�
 cargo install cargo-generate
 ```
 
-在我们的课程中，新的项目会使用 `tyr-rust-bootcamp/template` 模版生成基本的代码：
+如：
 
 ```bash
-cargo generate tyr-rust-bootcamp/template
+cargo generate studyxiao/template-rs
 ```
 
 ### 安装 pre-commit
@@ -64,15 +64,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 uv tool install pre-commit
 ```
 
-安装成功后运行 `pre-commit install` 即可。
-
-### 安装 Cargo deny
-
-Cargo deny 是一个 Cargo 插件，可以用于检查依赖的安全性。
-
-```bash
-cargo install --locked cargo-deny
-```
+安装成功后，在项目下手动运行 `pre-commit install`。
 
 ### 安装 typos
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -e
+# set -e
 
 # 颜色输出
 GREEN='\033[0;32m'
@@ -43,19 +43,9 @@ fi
 # 安装 pre-commit
 if command -v pre-commit >/dev/null 2>&1; then
   echo -e "${YELLOW}pre-commit 已安装，跳过安装步骤${NC}"
-  pre-commit install
 else
   echo -e "${GREEN}使用 uv 安装 pre-commit...${NC}"
   uv tool install pre-commit
-  pre-commit install
-fi
-
-# 安装 Cargo deny
-if command -v cargo-deny >/dev/null 2>&1; then
-  echo -e "${YELLOW}cargo-deny 已安装，跳过安装步骤${NC}"
-else
-  echo -e "${GREEN}安装 Cargo deny...${NC}"
-  cargo install --locked cargo-deny
 fi
 
 # 安装 typos

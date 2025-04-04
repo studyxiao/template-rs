@@ -1,0 +1,12 @@
+[template]
+exclude = ["cliff.toml"]
+
+[placeholders.init-script]
+type = "bool"
+prompt = "是否执行初始化脚本（安装开发工具）"
+default = true
+
+[hooks]
+post = [
+    "init-hook.rhai"
+]
