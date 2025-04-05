@@ -17,8 +17,7 @@ curl -sSfL https://raw.githubusercontent.com/studyxiao/template-rs/refs/heads/ma
 
 ```bash
 # -a 表示允许执行 hooks 脚本中的命令
-cargo generate -a
-
+cargo generate -a studyxiao/template-rs
 # 🤷   Project Name: test
 # 🔧   Destination:  ...
 # 🔧   project-name: test ...

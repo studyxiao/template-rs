@@ -63,7 +63,7 @@ git-cliff -o CHANGELOG.md --tag "$VERSION"
 # 提交更改
 echo "提交版本更新..."
 git add Cargo.toml Cargo.lock CHANGELOG.md
-git commit -m "chore: bump version to v$VERSION"
+git commit -m "chore(release): prepare for v$VERSION"
 
 # 创建标签
 echo "创建标签 v$VERSION..."

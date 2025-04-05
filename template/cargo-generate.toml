@@ -1,5 +1,7 @@
 [template]
-exclude = ["cliff.toml"]
+
+[placeholders]
+gh-username = { type = "string", prompt = "GitHub 用户名" }
 
 [placeholders.init-script]
 type = "bool"
